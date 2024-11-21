@@ -1,0 +1,6 @@
+@FinalProjectGroup5_HostAddress = http://localhost:5019
+
+GET {{FinalProjectGroup5_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
