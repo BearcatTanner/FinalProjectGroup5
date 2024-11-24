@@ -10,7 +10,7 @@ using FinalProjectGroup5.Models;
 
 namespace FinalProjectGroup5.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class CoursesController : ControllerBase
     {
