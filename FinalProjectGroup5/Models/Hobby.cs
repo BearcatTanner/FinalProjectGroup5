@@ -5,14 +5,14 @@
         public int HobbyId { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        public DateOnly StartDate { get; set; }
+        public DateTime StartDate { get; set; }
         public int HoursPerWeek { get; set; }
         public string PreferredPlatform { get; set; }
 
 
         public Hobby() { }
 
-        public Hobby(int hobbyId, string name, string description, DateOnly startDate, int hoursPerWeek, string preferredPlatform)
+        public Hobby(int hobbyId, string name, string description, DateTime startDate, int hoursPerWeek, string preferredPlatform)
         {
             HobbyId = hobbyId;
             Name = name;
