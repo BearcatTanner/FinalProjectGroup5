@@ -16,6 +16,7 @@ namespace YourProjectNamespace.Controllers
     {
         private readonly FinalProjectGroup5Context _context;
 
+
         public HobbyController(FinalProjectGroup5Context context)
         {
             _context = context;
