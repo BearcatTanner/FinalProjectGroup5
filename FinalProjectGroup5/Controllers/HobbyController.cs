@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using FinalProjectGroup5.Data;
 using FinalProjectGroup5.Models;
 
-namespace YourProjectNamespace.Controllers
+namespace FinalProjectGroup5.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

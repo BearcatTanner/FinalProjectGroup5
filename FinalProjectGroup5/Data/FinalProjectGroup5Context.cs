@@ -16,5 +16,7 @@ namespace FinalProjectGroup5.Data
 
         public DbSet<FinalProjectGroup5.Models.Course> Course { get; set; } = default!;
         public DbSet<FinalProjectGroup5.Models.Hobby> Hobbies { get; set; } = default!;
+        public DbSet<FinalProjectGroup5.Models.GroupMembers> GroupMembers { get; set; } = default!;
+        public DbSet<FinalProjectGroup5.Models.Jobs> Jobs { get; set; } = default!;
     }
 }
