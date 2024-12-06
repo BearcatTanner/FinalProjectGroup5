@@ -22,37 +22,20 @@ namespace FinalProjectGroup5.Controllers
             _context = context;
         }
 
-        // GET: api/Hobby
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<Hobby>>> GetHobbies(int? id)
-        {
-            if (id == null || id == 0)
-            {
-                return await _context.Hobbies.Take(5).ToListAsync();
-            }
-
-            var hobby = await _context.Hobbies.FindAsync(id);
-
-            if (hobby == null)
-            {
-                return NotFound();
-            }
-
-            return new List<Hobby> { hobby };
-        }
-
         // GET: api/Hobby/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Hobby>> GetHobby(int id)
         {
-            var hobby = await _context.Hobbies.FindAsync(id);
 
-            if (hobby == null)
+            Hobby hobby = _context.Hobbies.Find(id);
+
+            if (id == 0 || hobby == null)
             {
-                return NotFound();
+                return Ok(_context.Hobbies.ToList().Slice(0, 5));
             }
 
-            return hobby;
+            return Ok(hobby);
+
         }
 
         // POST: api/Hobby
