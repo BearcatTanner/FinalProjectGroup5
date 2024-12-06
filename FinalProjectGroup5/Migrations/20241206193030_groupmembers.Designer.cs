@@ -4,6 +4,7 @@ using FinalProjectGroup5.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FinalProjectGroup5.Migrations
 {
     [DbContext(typeof(FinalProjectGroup5Context))]
-    partial class FinalProjectGroup5ContextModelSnapshot : ModelSnapshot
+    [Migration("20241206193030_groupmembers")]
+    partial class groupmembers
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -108,32 +111,6 @@ namespace FinalProjectGroup5.Migrations
                     b.HasKey("HobbyId");
 
                     b.ToTable("Hobbies");
-                });
-
-            modelBuilder.Entity("FinalProjectGroup5.Models.Jobs", b =>
-                {
-                    b.Property<int>("JobID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("JobID"));
-
-                    b.Property<int>("HourlyPay")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Location")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("TravelTime")
-                        .HasColumnType("int");
-
-                    b.Property<int>("WeeklyHours")
-                        .HasColumnType("int");
-
-                    b.HasKey("JobID");
-
-                    b.ToTable("Jobs");
                 });
 #pragma warning restore 612, 618
         }

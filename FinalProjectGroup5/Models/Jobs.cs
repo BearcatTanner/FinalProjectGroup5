@@ -1,8 +1,10 @@
-﻿namespace FinalProjectGroup5.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace FinalProjectGroup5.Models
 {
     public class Jobs
     {
-        public int JobID { get; set; }
+        [Key] public int JobID { get; set; }
         public string Location { get; set; }
         public int HourlyPay { get; set; }
         public int WeeklyHours { get; set; }

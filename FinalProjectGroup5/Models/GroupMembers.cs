@@ -1,8 +1,10 @@
-﻿namespace FinalProjectGroup5.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace FinalProjectGroup5.Models
 {
     public class GroupMembers
     {
-        public int Member { get; set; }
+        [Key] public int Member { get; set; }
         public DateTime Birthdate { get; set; }
         public string Program { get; set; }
         public string Year { get; set; }
